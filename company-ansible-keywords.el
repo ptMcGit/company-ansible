@@ -2862,6 +2862,7 @@
     "build_flags"
     "buildargs"
     "builder_cache"
+    "builtin"
     "bulk"
     "bulk_sync_kvcache"
     "bulk_volume_size_gb"

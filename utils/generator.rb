@@ -4,6 +4,9 @@ require 'yaml'
 require 'erb'
 
 keywords = []
+
+keywords += (File.read 'additional_keywords.txt').split
+
 Dir[File.expand_path ARGV[0]].each do |file|
   content = File.read file
   documentation = content.match(/DOCUMENTATION = r?'''\n(.*?)\n'''/m)

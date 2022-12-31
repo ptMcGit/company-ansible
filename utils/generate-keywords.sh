@@ -15,10 +15,10 @@ ANSIBLE_VERSIONS=(
 
 
 mkdir -p ./repos/
-for version in ${ANSIBLE_VERSIONS[@]} ; do
+for version in "${ANSIBLE_VERSIONS[@]}" ; do
     echo "Downloading modules for ansible $version..."
-    if [ ! -d ./repos/$version ] ; then
-        git clone https://github.com/ansible/ansible.git --branch=$version --depth=1 --recursive ./repos/$version/
+    if [ ! -d ./repos/"$version" ] ; then
+        git clone https://github.com/ansible/ansible.git --branch="$version" --depth=1 --recursive ./repos/"$version"/
     fi
 done
 
